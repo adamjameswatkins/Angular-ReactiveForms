@@ -125,7 +125,7 @@
                                             customerForm.get('rating')?.dirty) &&
                                             !customerForm.get('rating')?.valid }" />
           <span class="invalid-feedback">
-            <span *ngIf="customerForm.get('rating')?.errors?.required">
+            <span *ngIf="customerForm.get('rating')?.errors?.range">
               Please rate your experience from 1 to 5.
             </span>
           </span>
