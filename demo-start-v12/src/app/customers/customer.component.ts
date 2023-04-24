@@ -51,6 +51,9 @@ export class CustomerComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.customerForm.get('notification')?.valueChanges.subscribe(
+      value => this.setNotification(value)
+    );
   }
 
   populateData(): void {
