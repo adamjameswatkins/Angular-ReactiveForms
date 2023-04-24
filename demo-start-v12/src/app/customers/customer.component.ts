@@ -76,6 +76,10 @@ export class CustomerComponent implements OnInit {
     );
   }
 
+  addAddress(): void {
+    this.addresses.push(this.buildAddress());
+  }
+
   buildAddress(): FormGroup {
     return this.formBuilder.group({
       addressType: 'home',
